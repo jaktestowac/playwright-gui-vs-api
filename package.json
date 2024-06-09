@@ -1,0 +1,29 @@
+{
+  "name": "gui-api-webinar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --write .",
+    "test": "npx playwright test",
+    "test:seed": "npx playwright test -c playwright.config.seed.ts",
+    "test:headed": "npx playwright test --headed",
+    "test:ui-mode": "npx playwright test --ui",
+    "test:ui-mode:setup": "npx playwright test --ui -c playwright-setup-project.config.ts",
+    "test:ui-mode:seed": "npx playwright test --ui -c playwright-seed-project.config.ts",
+    "test:ui-mode:ai": "npx playwright test --ui -c playwright-ai-project.config.ts",
+    "test:repeat-each": "npx playwright test -g \"register user faker api \" --repeat-each 5",
+    "show-report": "npx playwright show-report",
+    "test:tag": "npx playwright test --grep @tag"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5",
+    "prettier": "^3.0.3"
+  }
+}
